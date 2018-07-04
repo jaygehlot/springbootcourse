@@ -1,0 +1,25 @@
+TS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+.DS_Store*
+
+
+# Gradle Files #
+################
+.gradle
+.m2
+
+# Build output directies
+target/
+build/
