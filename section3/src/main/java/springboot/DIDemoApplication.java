@@ -1,7 +1,7 @@
 package springboot;
 
 import org.springframework.context.ConfigurableApplicationContext;
-import springboot.controllers.MyController;
+import springboot.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -26,12 +26,15 @@ public class DIDemoApplication {
 
         controller.hello();
 
+        System.out.println(applicationContext.getBean(PropertyInjectedControllerUsingSpring.class).sayHello());
+        System.out.println(applicationContext.getBean(SetterInjectedControllerUsingSpring.class).sayHello());
+        System.out.println(applicationContext.getBean(ConstructorInjectedControllerUsingSpring.class).sayHello());
+
+
         applicationContext.close();
 
 
-//        System.out.println(context.getBean(PropertyInjectedControllerUsingSpring.class).sayHello());
-//        System.out.println(context.getBean(SetterInjectedControllerUsingSpring.class).sayHello());
-//        System.out.println(context.getBean(ConstructorInjectedControllerWithSpring.class).sayHello());
+
 
 
 

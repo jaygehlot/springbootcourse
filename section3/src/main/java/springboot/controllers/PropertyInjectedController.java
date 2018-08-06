@@ -6,12 +6,12 @@ import springboot.services.GreetingsService;
 /**
  * This is NOT good practice
  */
-class PropertyInjectedController {
+public class PropertyInjectedController {
 
     //using a property to inject - NOT good practice
     GreetingsService greetingsService;
 
-    String sayHello() {
+    public String sayHello() {
         return greetingsService.sayGreeting();
     }
 }
