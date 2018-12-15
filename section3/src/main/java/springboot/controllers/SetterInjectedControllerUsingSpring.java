@@ -18,7 +18,7 @@ public class SetterInjectedControllerUsingSpring {
     //using a setter to inject - NOT preferred
     //The GreetingService will be pulled in at runtime from app context, as this is now managed by spring
     @Autowired
-    public void setGreetingService(@Qualifier("getterGreetingImpl") GreetingsService greetingService) {
+    public void setGreetingService(@Qualifier("getterGreetingServiceImpl") GreetingsService greetingService) {
         this.greetingService = greetingService;
     }
 }

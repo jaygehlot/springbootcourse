@@ -15,9 +15,12 @@ public class PropertyInjectedControllerUsingSpring {
     //@Qualifer will tell Spring which implementation of Greeting Service to use, as there are 3 implementations
     @Autowired
     @Qualifier("greetingServiceImpl")
-    GreetingsService greetingsServiceImpl;
+    GreetingsService greetingServiceImpl;           //note that the type ("GreetingService") is the interface, but the variable
+                                                    //is of the bean name ("greetingServiceImpl"), so Spring can use reflection
+                                                    //and we actually DON'T need to use @Qualifier
+                                                    //BETTER to use Qualifier
 
     public String sayHello() {
-        return greetingsServiceImpl.sayGreeting();
+        return greetingServiceImpl.sayGreeting();
     }
 }

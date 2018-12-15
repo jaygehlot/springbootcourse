@@ -9,9 +9,10 @@ import springboot.services.GreetingsService;
 public class PropertyInjectedController {
 
     //using a property to inject - NOT good practice
-    GreetingsService greetingsService;
+    //variable named the same as the implementation of the interface ("GreetingsService")
+    GreetingsService greetingServiceImpl;
 
     public String sayHello() {
-        return greetingsService.sayGreeting();
+        return greetingServiceImpl.sayGreeting();
     }
 }

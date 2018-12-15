@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 //@Service is a specialization of the @Component, Spring will now manage this
 @Service
-public class ConstructorGreetingImpl implements GreetingsService {
+public class ConstructorGreetingServiceImpl implements GreetingsService {
 
     @Override
     public String sayGreeting() {

@@ -14,7 +14,7 @@ public class ConstructorInjectedControllerUsingSpring {
      * Constructor is taking in the interface and not the implementation
      */
     @Autowired //Injecting the implementation that is used by GreetingService. @Autowired not necessarily needed.
-    public ConstructorInjectedControllerUsingSpring(@Qualifier("constructorGreetingImpl") GreetingsService greetingsService) {
+    public ConstructorInjectedControllerUsingSpring(@Qualifier("constructorGreetingServiceImpl") GreetingsService greetingsService) {
         this.greetingsService = greetingsService;
     }
 
